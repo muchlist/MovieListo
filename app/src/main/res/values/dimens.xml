@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation">2dp</dimen>
+    <dimen name="small">4dp</dimen>
+    <dimen name="small6">6dp</dimen>
+    <dimen name="medium">8dp</dimen>
+    <dimen name="xmedium">10dp</dimen>
+    <dimen name="large">12dp</dimen>
+    <dimen name="large16">16dp</dimen>
+    <dimen name="xlarge">18dp</dimen>
+    <dimen name="xxlarge">24dp</dimen>
+    <dimen name="xxxlarge">32dp</dimen>
+
+    <dimen name="corner_radius">7dp</dimen>
+    <dimen name="margeside">16dp</dimen>
+</resources>

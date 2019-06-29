@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">MovieListo</string>
+    <string name="title_movie">Film</string>
+    <string name="title_tv_series">TV Series</string>
+
+    <string name="desc_movie_poster">Poster Film</string>
+    <string name="desc_change_languange_button">tombol mengganti bahasa</string>
+    <string name="search_here_hint">Masukkan Pencarian</string>
+    <string name="desc_poster_thumbnail">Poster Thumbnail</string>
+
+    <string name="genre_drama">Drama</string>
+    <string name="genre_action">Aksi</string>
+    <string name="genre_thriller">Thriller</string>
+    <string name="genre_musical">Musik</string>
+    <string name="genre_family">Keluarga</string>
+    <string name="genre_sci_fi">Sci-Fi</string>
+    <string name="genre_anime_action">Animasi-Aksi</string>
+    <string name="genre_comedy">Komedi</string>
+    <string name="genre_drama_war">Drama-Perang</string>
+    <string name="genre_crime">Kejahatan</string>
+
+    <!--FILM-->
+    <string name="a_star_is_born">A Star Is Born</string>
+    <string name="aquaman">Aquaman</string>
+    <string name="avenger">Avengers : Infinity War</string>
+    <string name="birdbox">Birdbox</string>
+    <string name="bohemian">Bohemian Rhapsody</string>
+    <string name="bumblebee">Bumblebee</string>
+    <string name="creed">Creed</string>
+    <string name="deadpool">Deadpool</string>
+    <string name="dragon">How To Train Your Dragon</string>
+    <string name="mortal_engine">Mortal Engine</string>
+
+    <string name="star_detail">Musisi kawakan Jackson Maine menemukan - dan jatuh cinta dengan - artis yang sedang
+        berjuang Sekutu. Dia baru saja menyerah pada mimpinya untuk menjadi besar sebagai penyanyi - sampai Jack
+        membujuknya masuk menyoroti. Tetapi bahkan ketika karir Ally lepas landas, sisi pribadi dari hubungan mereka
+        rusak, seperti Jack berkelahi dalam pertempuran yang sedang berlangsung dengan setan internalnya sendiri.
+    </string>
+    <string name="aquaman_detail">Dulunya merupakan rumah bagi peradaban paling maju di Bumi, Atlantis sekarang menjadi
+        air kerajaan diperintah oleh Raja Orm yang haus kekuasaan. Dengan pasukan yang sangat besar, Orm berencana untuk
+        menaklukkan yang tersisa orang-orang samudera dan kemudian permukaan dunia. Yang menghalanginya adalah Arthur
+        Curry, setengah manusia Orm, saudara setengah-Atlantis dan pewaris sejati takhta.
+    </string>
+    <string name="avenger_detail">Sebagai Avengers dan sekutu mereka terus melindungi dunia dari ancaman juga besar
+        untuk ditangani oleh satu pahlawan, bahaya baru telah muncul dari bayang-bayang kosmik: Thanos.
+        Seorang lalim dari keburukan intergalaksi, tujuannya adalah untuk mengumpulkan semua enam Batu Infinity, artefak
+        kekuatan yang tak terbayangkan, dan menggunakan mereka menimbulkan kehendaknya yang terpelintir pada semua
+        realitas. Semua yang Avengers telah perjuangkan telah mengarah ke ini saat - nasib Bumi dan keberadaannya
+        sendiri tidak pernah lebih pasti.
+    </string>
+    <string name="birdbox_detail">Lima tahun setelah kehadiran tak terlihat yang tidak menyenangkan membuat sebagian
+        besar masyarakat bunuh diri, selamat dan dua anaknya melakukan upaya putus asa untuk mencapai keselamatan.
+    </string>
+    <string name="bohemian_detail">Penyanyi Freddie Mercury, gitaris Brian May, drummer Roger Taylor dan gitaris bass
+        John Deacon mengambil dunia musik dengan badai ketika mereka membentuk band rock Queen Rock pada tahun 1970.
+        Lagu-lagu hit menjadi klasik instan. Ketika gaya hidup Merkurius yang semakin liar mulai lepas kendali, Ratu
+        segera menghadapi tantangan terbesarnya - menemukan cara untuk menjaga band bersama di tengah kesuksesan dan
+        kelebihan.
+    </string>
+    <string name="bumblebee_detail">
+        Dalam pelarian pada tahun 1987, Bumblebee menemukan perlindungan di tempat barang rongsokan di sebuah tempat
+        kecil Kota pantai California. Charlie, di puncak usia 18 dan berusaha menemukan tempatnya di dunia, menemukan
+        Lebah, pertempuran-bekas luka dan rusak. Ketika Charlie menghidupkannya, dia dengan cepat mengetahui bahwa ini
+        bukan VW kuning biasa bug.
+    </string>
+    <string name="creed_detail">Mantan Juara Kelas Berat Dunia Rocky Balboa berfungsi sebagai pelatih dan mentor
+        Adonis Johnson, putra almarhum teman dan mantan saingannya Apollo Creed
+    </string>
+    <string name="deadpool_detail">Deadpool menceritakan kisah asal-usul mantan pasukan khusus yang menjadi tentara
+        bayaran Wade Wilson, yang setelah menjadi sasaran percobaan jahat yang membuatnya dengan kekuatan penyembuhan
+        dipercepat, mengadopsi Deadpool alter ego. Dipersenjatai dengan kemampuan barunya dan selera humor yang gelap
+        dan bengkok, Deadpool memburu turun pria yang hampir menghancurkan hidupnya.
+    </string>
+    <string name="dragon_detail">Sebagai putra seorang pemimpin Viking pada puncak kedewasaan, pemalu Hiccup Horrendous
+        Haddock III menghadapi ritual peralihan: ia harus membunuh naga untuk membuktikan keberanian prajuritnya. Tapi
+        setelah menabrak naga yang ditakuti, dia menyadari bahwa dia tidak lagi ingin menghancurkannya, dan malah
+        berteman dengan binatang buas - yang dia beri nama Toothless - banyak yang kecewa dari ayah prajuritnya
+    </string>
+    <string name="mortal_engine_detail">Ribuan tahun di masa depan, kota-kota di bumi menjelajah dunia dengan sangat
+        besar roda, saling melahap dalam perjuangan untuk sumber daya yang semakin berkurang. Di salah satu daya tarik
+        besar ini kota-kota, London tua, Tom Natsworthy memiliki pertemuan tak terduga dengan seorang wanita muda
+        misterius dari tanah terlantar yang akan mengubah jalan hidupnya selamanya.
+    </string>
+
+    <!--TV-SERIES-->
+    <string name="arrow">Arrow</string>
+    <string name="doom_patrol">Doom Patrol</string>
+    <string name="dragon_ball">Dragon Ball</string>
+    <string name="fairy_tail">Fairy Tail</string>
+    <string name="family_guy">Family Guy</string>
+    <string name="game_of_thrones">Game of Thrones</string>
+    <string name="gotham">Gotham</string>
+    <string name="grey_anatomy">Grey Anatomy</string>
+    <string name="hanna">Hanna</string>
+    <string name="the_flash">The Flash</string>
+
+    <string name="arrow_detail">Playboy miliarder manja, Oliver Queen, hilang dan diduga tewas saat kapal pesiarnya
+        hilang di laut. Dia kembali lima tahun kemudian seorang pria yang berubah, bertekad untuk membersihkan kota
+        sebagai main hakim sendiri dipersenjatai dengan busur.
+    </string>
+    <string name="doom_patrol_detail">Anggota Patroli Doom masing-masing mengalami kecelakaan mengerikan yang memberi
+        mereka kemampuan manusia super - tetapi juga meninggalkan mereka menjadi bekas luka dan cacat. Trauma dan
+        tertindas, tim menemukan tujuan melalui Ketua, yang membawa mereka bersama untuk menyelidiki fenomena paling
+        aneh yang ada
+        - dan melindungi Bumi dari apa yang mereka temukan.
+    </string>
+    <string name="dragon_ball_detail">Bocah yang kuat itu sendirian, tetapi mudah dikelola. Lalu suatu hari, Goku
+        bertemu seorang remaja gadis bernama Bulma, yang pencariannya untuk bola naga membawanya ke rumah Goku.
+        Bersama-sama, mereka berangkat untuk mencari semua tujuh bola naga dalam petualangan yang akan mengubah hidup
+        Goku selamanya. Lihat bagaimana Goku bertemu seumur hidupnya teman-teman Bulma, Yamcha, Krillin, Master Roshi
+        dan banyak lagi. Dan melihat petualangannya sebagai anak laki-laki, semua mengarah ke Dragonball Z dan kemudian
+        Dragonball GT.
+    </string>
+    <string name="fairy_tail_detail">Lucy adalah seorang gadis berusia 17 tahun, yang ingin menjadi penyihir penuh.
+        Suatu hari ketika mengunjungi Harujion Town, dia bertemu Natsu, seorang pria muda yang mudah sakit dengan segala
+        jenis transportasi. Tapi Natsu bukan sembarang anak biasa, dia adalah anggota dari salah satu serikat penyihir
+        paling terkenal di dunia: Fairy Tail
+    </string>
+    <string name="family_guy_detail">Seri animasi yang manis, bengkok, salah secara politis, dan Freakin \'Sweet
+        menampilkan petualangan keluarga Griffin yang disfungsional. Peter yang kikuk dan Lois yang sudah lama menderita
+        memiliki tiga anak. Stewie (bayi yang cerdas tetapi sadis bertekad membunuh ibunya dan mengambil alih dunia),
+        Meg (yang tertua, dan merupakan gadis yang paling tidak populer di kota) dan Chris (anak tengah, dia tidak
+        terlalu cerdas tetapi memiliki hasrat untuk film). Anggota terakhir keluarga adalah Brian - anjing yang bisa
+        bicara dan lebih dari sekadar hewan peliharaan, ia memelihara Stewie periksa sambil menyeruput Martinis dan
+        memilah-milah masalah hidupnya sendiri.
+    </string>
+    <string name="game_of_thrones_detail">Tujuh keluarga bangsawan berjuang untuk menguasai tanah mitos Westeros.
+        Gesekan antara rumah-rumah mengarah ke perang skala penuh. Semua sementara kejahatan yang sangat kuno terbangun
+        di tempat terjauh utara. Di tengah-tengah perang, perintah militer yang diabaikan, Night Watch, adalah semua
+        yang berdiri di antara ranah laki-laki dan kengerian sedingin es di luar.
+    </string>
+    <string name="gotham_detail">Sebelum ada Batman, ada GOTHAM.
+        Semua orang tahu nama Komisaris Gordon. Dia adalah salah satu musuh terbesar dunia kejahatan, seorang pria yang
+        reputasi identik dengan hukum dan ketertiban. Tapi apa yang diketahui tentang kisah Gordon dan kebangkitannya
+        dari rookie detektif kepada Komisaris Polisi? Apa yang diperlukan untuk menavigasi berbagai lapisan korupsi yang
+        diam-diam memerintah Kota Gotham, tempat bertelurnya penjahat paling ikonik di dunia? Dan keadaan apa yang
+        menciptakan mereka - persona yang lebih besar dari kehidupan yang akan menjadi Catwoman, The Penguin, The
+        Riddler, Two-Face dan The Joker?
+    </string>
+    <string name="grey_anatomy_detail">Mengikuti kehidupan pribadi dan profesional sekelompok dokter di Seattle
+        Rumah Sakit Memorial Grey Sloan.
+    </string>
+    <string name="hanna_detail">Drama yang menegangkan dan dewasa ini mengikuti perjalanan seorang gadis muda yang luar
+        biasa ketika dia menghindari pengejaran tanpa henti dari agen CIA di luar buku dan mencoba untuk menggali
+        kebenaran di balik siapa dia. Berdasarkan film Joe Wright 2011.
+    </string>
+    <string name="the_flash_detail">
+        Setelah akselerator partikel menyebabkan badai aneh, Penyelidik CSI Barry Allen adalah
+        tersambar petir dan jatuh koma. Beberapa bulan kemudian dia terbangun dengan kekuatan kecepatan super,
+        memberikannya kemampuan untuk bergerak melalui Central City seperti malaikat penjaga yang tak terlihat. Meskipun
+        awalnya senang dengan yang baru ditemukannya kekuatan, Barry terkejut menemukan dia bukan satu - satunya meta -
+        manusia yang diciptakan setelah ledakan akselerator dan tidak semua orang menggunakan kekuatan baru mereka untuk
+        selamanya. Barry bermitra dengan S.T.A.R. Labs dan mendedikasikan hidupnya untuk melindungi orang yang tidak
+        bersalah. Untuk saat ini, hanya beberapa teman dekat dan rekan yang tahu bahwa Barry adalah orangnya secara
+        harfiah manusia tercepat, tetapi itu tidak akan lama sebelum dunia mengetahui apa yang menjadi Barry Allen
+        Flash.
+    </string>
+
+</resources>
