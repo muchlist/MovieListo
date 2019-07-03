@@ -38,9 +38,15 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    //anko common
-    implementation "org.jetbrains.anko:anko-commons:0.10.8"
-
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //networking
+    implementation 'com.squareup.moshi:moshi:1.8.0'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.6.0'
+
+    //anko common
+    implementation "org.jetbrains.anko:anko-commons:0.10.8"
 }

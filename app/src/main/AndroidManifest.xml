@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.meretas.movielisto">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -9,13 +11,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="._detail.DetailActivity"
-                  android:screenOrientation="portrait">
+        <activity android:name="._detail.TvDetailActivity">
+        </activity>
+        <activity
+                android:name="._detail.MovieDetailActivity">
         </activity>
         <activity
                 android:name=".MainActivity"
                 android:label="@string/app_name"
-                android:screenOrientation="portrait"
                 android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

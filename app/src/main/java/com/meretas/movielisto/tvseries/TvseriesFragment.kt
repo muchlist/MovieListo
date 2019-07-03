@@ -8,20 +8,25 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.meretas.movielisto.R
-import com.meretas.movielisto._detail.DetailActivity
-import com.meretas.movielisto.data.MovieData
+import com.meretas.movielisto._detail.TvDetailActivity
+import com.meretas.movielisto.data.TvListData
+import com.meretas.movielisto.services.Api
+import com.meretas.movielisto.services.ApiService
 import com.meretas.movielisto.utils.DATA_INTENT_MAIN_DETAIL
+import kotlinx.android.synthetic.main.fragment_tvseries.*
 import kotlinx.android.synthetic.main.fragment_tvseries.view.*
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 
 class TvseriesFragment : Fragment(), TvseriesView {
 
     private lateinit var presenter: TvseriesPresenter
+    private lateinit var apiService: ApiService
 
     //Recycler View item
     private lateinit var tvAdapter: TvseriesListAdapter
-    private var tvSeriesData: MutableList<MovieData> = mutableListOf()
+    private var tvSeriesData: MutableList<TvListData.Result> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,119 +38,40 @@ class TvseriesFragment : Fragment(), TvseriesView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        presenter = TvseriesPresenter(this)
+        apiService = Api.retrofitService
+        presenter = TvseriesPresenter(this, apiService)
 
         //START RECYCLER VIEW
         view.rv_tvseries.layoutManager = LinearLayoutManager(activity)
         tvAdapter = TvseriesListAdapter(activity, tvSeriesData) {
-            context?.startActivity<DetailActivity>(DATA_INTENT_MAIN_DETAIL to it)
+            context?.startActivity<TvDetailActivity>(
+                DATA_INTENT_MAIN_DETAIL to it
+            )
         }
         view.rv_tvseries.adapter = tvAdapter
+        view.rv_tvseries.setHasFixedSize(true)
         //END RECYCLER VIEW
 
         //mengisi History Recyclerview
         presenter.getTVData()
     }
 
-    override fun showTVList() {
+    override fun showTVList(tvList: List<TvListData.Result>) {
         this.tvSeriesData.clear()
-
-        //Aggap Movie Data dapat dari presenter
-        this.tvSeriesData.apply {
-            clear()
-            add(
-                MovieData(
-                    R.drawable.tv_arrow,
-                    5.8,
-                    getString(R.string.genre_action),
-                    getString(R.string.arrow),
-                    getString(R.string.arrow_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_doom_patrol,
-                    6.1,
-                    getString(R.string.genre_sci_fi),
-                    getString(R.string.doom_patrol),
-                    getString(R.string.doom_patrol_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_dragon_ball,
-                    7.1,
-                    getString(R.string.genre_anime_action),
-                    getString(R.string.dragon_ball),
-                    getString(R.string.dragon_ball_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_fairytail,
-                    6.4,
-                    getString(R.string.genre_anime_action),
-                    getString(R.string.fairy_tail),
-                    getString(R.string.fairy_tail_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_family_guy,
-                    6.5,
-                    getString(R.string.genre_comedy),
-                    getString(R.string.family_guy),
-                    getString(R.string.family_guy_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_god,
-                    8.1,
-                    getString(R.string.genre_drama_war),
-                    getString(R.string.game_of_thrones),
-                    getString(R.string.game_of_thrones_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_gotham,
-                    6.9,
-                    getString(R.string.genre_crime),
-                    getString(R.string.gotham),
-                    getString(R.string.gotham_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_grey_anatomy,
-                    6.9,
-                    getString(R.string.genre_drama),
-                    getString(R.string.grey_anatomy),
-                    getString(R.string.grey_anatomy_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_hanna,
-                    6.4,
-                    getString(R.string.genre_thriller),
-                    getString(R.string.hanna),
-                    getString(R.string.hanna_detail)
-                )
-            )
-            add(
-                MovieData(
-                    R.drawable.tv_flash,
-                    6.7,
-                    getString(R.string.genre_action),
-                    getString(R.string.the_flash),
-                    getString(R.string.the_flash_detail)
-                )
-            )
-        }
-        //this.tvSeriesData.addAll(movieData)
+        this.tvSeriesData.addAll(tvList)
         tvAdapter.notifyDataSetChanged()
+    }
+
+    override fun showLoading() {
+        pb_tv_series.visibility = View.VISIBLE
+    }
+
+    override fun hideLoading() {
+        pb_tv_series.visibility = View.GONE
+    }
+
+    override fun showError(error: String) {
+        activity?.toast(error)
     }
 
     override fun onDestroy() {

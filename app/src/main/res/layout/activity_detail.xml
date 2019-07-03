@@ -1,105 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.core.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@color/whitee"
-        android:layout_width="match_parent"
+        tools:context="._detail.MovieDetailActivity"
         android:layout_height="match_parent"
-        tools:context="._detail.DetailActivity">
+        android:layout_width="match_parent" android:background="@color/whitee">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@color/whitee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_marginBottom="50dp">
 
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:id="@+id/iv_detail_backdrop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/poster_bohemian"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/poster_bohemian"
-            android:contentDescription="@string/desc_movie_poster"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/iv_detail_backdrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/poster_bohemian"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/poster_bohemian"
+                    android:contentDescription="@string/desc_movie_poster"/>
 
-    <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:srcCompat="@drawable/gradian_backdrop"
-            android:id="@+id/iv__"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_detail_backdrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/iv_detail_backdrop"
-            android:visibility="visible"
-            tools:ignore="ContentDescription"/>
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/gradian_backdrop"
+                    android:id="@+id/iv__"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_detail_backdrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/iv_detail_backdrop"
+                    android:visibility="visible"
+                    tools:ignore="ContentDescription"/>
 
-    <com.google.android.material.card.MaterialCardView
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:id="@+id/cv__"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_detail_backdrop"
-            app:layout_constraintTop_toBottomOf="@+id/iv_detail_backdrop"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/large16"
-            app:cardCornerRadius="@dimen/small">
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/cv__"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_detail_backdrop"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_detail_backdrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/large16"
+                    app:cardCornerRadius="@dimen/small">
 
-        <ImageView android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   tools:srcCompat="@drawable/poster_bohemian"
-                   android:scaleType="centerCrop"
-                   android:id="@+id/iv_detail_poster"
-                   android:contentDescription="@string/desc_movie_poster"/>
-
-
-    </com.google.android.material.card.MaterialCardView>
-    <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_detail_title"
-            app:layout_constraintStart_toEndOf="@+id/cv__"
-            android:layout_marginStart="@dimen/large16"
-            app:layout_constraintTop_toBottomOf="@+id/iv_detail_backdrop"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif"
-            tools:text="Bohaemian Rhapsodhy"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/large16"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_detail_genre"
-            app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_detail_title"
-            android:layout_marginTop="@dimen/medium"
-            tools:text="GENRE"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_detail_score"
-            app:layout_constraintTop_toTopOf="@+id/star__"
-            tools:text="7.7"
-            app:layout_constraintEnd_toStartOf="@+id/star__"
-            app:layout_constraintBottom_toBottomOf="@+id/star__"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_baseline_star_rate_18px"
-            android:id="@+id/star__"
-            app:layout_constraintEnd_toEndOf="@+id/tv_detail_title"
-            android:layout_marginEnd="@dimen/medium"
-            android:layout_marginTop="@dimen/medium"
-            app:layout_constraintTop_toBottomOf="@+id/tv_detail_title"
-            tools:ignore="ContentDescription"/>
-    <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_detail_description"
-            android:layout_marginTop="@dimen/medium"
-            app:layout_constraintTop_toBottomOf="@+id/cv__"
-            app:layout_constraintStart_toStartOf="@+id/cv__"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/large16"
-            tools:text="lrem lorem"/>
+                <ImageView android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           tools:srcCompat="@drawable/poster_bohemian"
+                           android:scaleType="centerCrop"
+                           android:id="@+id/iv_detail_poster"
+                           android:contentDescription="@string/desc_movie_poster"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_detail_title"
+                    app:layout_constraintStart_toEndOf="@+id/cv__"
+                    android:layout_marginStart="@dimen/large16"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    tools:text="Bohaemian Rhapsodhy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/large16" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_detail_genre"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_detail_genre"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
+                    tools:text="GENRE" app:layout_constraintBottom_toTopOf="@+id/tv_detail_release_date"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_detail_score"
+                    app:layout_constraintTop_toTopOf="@+id/star__"
+                    tools:text="7.7"
+                    app:layout_constraintEnd_toStartOf="@+id/star__"
+                    app:layout_constraintBottom_toBottomOf="@+id/star__"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_star_rate_18px"
+                    android:id="@+id/star__"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_detail_title"
+                    android:layout_marginEnd="@dimen/medium"
+                    android:layout_marginTop="@dimen/medium"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_detail_title"
+                    tools:ignore="ContentDescription"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_detail_description"
+                    android:layout_marginTop="@dimen/medium"
+                    app:layout_constraintTop_toBottomOf="@+id/cv__"
+                    app:layout_constraintStart_toStartOf="@+id/cv__"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/large16"
+                    tools:text="lrem lorem"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_detail_release_date"
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_genre" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cv__" tools:text="120 minute" android:textSize="12sp"
+                    android:textStyle="italic" android:textColor="@color/grey_30" android:fontFamily="@font/roboto"
+                    android:paddingEnd="1dp" android:paddingStart="1dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
