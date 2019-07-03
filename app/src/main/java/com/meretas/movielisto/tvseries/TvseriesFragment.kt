@@ -27,22 +27,24 @@ class TvseriesFragment : Fragment(), TvseriesView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_tvseries, container, false)
+        return inflater.inflate(R.layout.fragment_tvseries, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         presenter = TvseriesPresenter(this)
 
         //START RECYCLER VIEW
-        rootView.rv_tvseries.layoutManager = LinearLayoutManager(activity)
+        view.rv_tvseries.layoutManager = LinearLayoutManager(activity)
         tvAdapter = TvseriesListAdapter(activity, tvSeriesData) {
-            context!!.startActivity<DetailActivity>(DATA_INTENT_MAIN_DETAIL to it)
+            context?.startActivity<DetailActivity>(DATA_INTENT_MAIN_DETAIL to it)
         }
-        rootView.rv_tvseries.adapter = tvAdapter
+        view.rv_tvseries.adapter = tvAdapter
         //END RECYCLER VIEW
 
         //mengisi History Recyclerview
         presenter.getTVData()
-
-        return rootView
     }
 
     override fun showTVList() {

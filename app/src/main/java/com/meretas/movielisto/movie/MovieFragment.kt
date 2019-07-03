@@ -27,22 +27,24 @@ class MovieFragment : Fragment(), MovieView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_movie, container, false)
+        return inflater.inflate(R.layout.fragment_movie, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         presenter = MoviePresenter(this)
 
         //START RECYCLER VIEW
-        rootView.rv_movie.layoutManager = LinearLayoutManager(activity)
+        view.rv_movie.layoutManager = LinearLayoutManager(activity)
         movieAdapter = MovieListAdapter(activity, movieData) {
-            context!!.startActivity<DetailActivity>(DATA_INTENT_MAIN_DETAIL to it)
+            context?.startActivity<DetailActivity>(DATA_INTENT_MAIN_DETAIL to it)
         }
-        rootView.rv_movie.adapter = movieAdapter
+        view.rv_movie.adapter = movieAdapter
         //END RECYCLER VIEW
 
         //mengisi History Recyclerview
         presenter.getMovieData()
-
-        return rootView
     }
 
     override fun showMovieList() {
