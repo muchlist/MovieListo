@@ -13,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String" , "TMDB_API_KEY" , '"c51926b7a80f450b3f8f0fe0175b9634"')
     }
     buildTypes {
         release {
@@ -37,6 +38,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //viewModel
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
 
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'

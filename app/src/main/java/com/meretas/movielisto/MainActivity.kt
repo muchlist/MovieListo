@@ -13,24 +13,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        view_pager_main.adapter = MainPagerAdapter(supportFragmentManager)
-        main_tab.setupWithViewPager(view_pager_main)
-        main_tab.getTabAt(0)?.setIcon(R.drawable.ic_movie)
-        main_tab.getTabAt(1)?.setIcon(R.drawable.ic_baseline_tv_24px)
+        initPager()
+        hideKeyboard()
 
         //TOMBOL MERUBAH LOCALE
         iv_dashboard_translate.setOnClickListener {
             val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
             startActivity(mIntent)
         }
-        //MENGHILANGKAN KEYBOARD DI SEARCHVIEW
+    }
+
+    private fun initPager() {
+        view_pager_main.adapter = MainPagerAdapter(supportFragmentManager)
+        main_tab.setupWithViewPager(view_pager_main)
+        main_tab.getTabAt(0)?.setIcon(R.drawable.ic_movie)
+        main_tab.getTabAt(1)?.setIcon(R.drawable.ic_baseline_tv_24px)
+    }
+
+    private fun hideKeyboard() {
         sv_dashboard.isFocusable = false
         sv_dashboard.clearFocus()
     }
-
-//    override fun onSaveInstanceState(outState: Bundle?) {
-//        super.onSaveInstanceState(outState)
-//        val saveState = nav_view.selectedItemId
-//        outState?.putInt(STATE_MAIN_ACTIVITY, saveState)
-//    }
 }

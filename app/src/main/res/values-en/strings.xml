@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">MovieListo</string>
-    <string name="title_movie">Movie</string>
-    <string name="title_tv_series">TV Series</string>
 
     <string name="desc_movie_poster">Movie Poster</string>
     <string name="desc_change_languange_button">change languange button</string>

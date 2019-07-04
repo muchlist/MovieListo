@@ -1,5 +1,6 @@
 package com.meretas.movielisto.services
 
+import com.meretas.movielisto.BuildConfig
 import com.meretas.movielisto.data.MovieListData
 import com.meretas.movielisto.data.TvListData
 import com.squareup.moshi.Moshi
@@ -14,7 +15,7 @@ import retrofit2.http.*
 //https://image.tmdb.org/t/p/w185/kSBXou5Ac7vEqKd97wotJumyJvU.jpg
 
 private const val BASE_URL = "https://api.themoviedb.org/3/discover/"
-private const val API_KEY = "c51926b7a80f450b3f8f0fe0175b9634"
+private const val API_KEY = BuildConfig.TMDB_API_KEY
 const val BASE_IMG_URL = "https://image.tmdb.org/t/p/w500"
 
 private val moshi = Moshi.Builder()
