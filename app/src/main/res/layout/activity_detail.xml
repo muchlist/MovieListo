@@ -5,14 +5,17 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context="._detail.MovieDetailActivity"
         android:layout_height="match_parent"
-        android:layout_width="match_parent" android:background="@color/whitee">
+        android:layout_width="match_parent"
+        android:background="@color/whitee"
+        tools:ignore="Overdraw">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:orientation="vertical">
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:background="@color/whitee"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:layout_marginBottom="50dp">
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp">
 
             <ImageView
                     android:layout_width="match_parent"
@@ -30,7 +33,6 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:srcCompat="@drawable/gradian_backdrop"
-                    android:id="@+id/iv__"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="@+id/iv_detail_backdrop"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -108,10 +110,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_detail_release_date"
-                    app:layout_constraintStart_toStartOf="@+id/tv_detail_genre" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/cv__" tools:text="120 minute" android:textSize="12sp"
-                    android:textStyle="italic" android:textColor="@color/grey_30" android:fontFamily="@font/roboto"
-                    android:paddingEnd="1dp" android:paddingStart="1dp"/>
+                    app:layout_constraintStart_toStartOf="@+id/tv_detail_genre"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cv__"
+                    tools:text="120 minute"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/grey_30"
+                    android:fontFamily="@font/roboto"
+                    android:paddingEnd="1dp"
+                    android:paddingStart="1dp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
