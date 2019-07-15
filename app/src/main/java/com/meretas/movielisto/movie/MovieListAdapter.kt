@@ -41,6 +41,7 @@ class MovieListAdapter(
             itemView.tv_title.text = items.title
             itemView.tv_sub_title.text = items.overview
             itemView.tv_genre.text = genreScore
+
             Picasso.get()
                 .load(posterPath)
                 .centerCrop()

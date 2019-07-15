@@ -3,13 +3,10 @@
 
     <string name="desc_movie_poster">Poster Film</string>
     <string name="desc_change_languange_button">tombol mengganti bahasa</string>
-    <string name="search_here_hint">Masukkan Pencarian</string>
+    <string name="favorite_button">Tombil Favorite</string>
     <string name="desc_poster_thumbnail">Poster Thumbnail</string>
-
     <string name="genre_crime">Kejahatan</string>
-
-    <!--FILM-->
-
-    <!--TV-SERIES-->
+    <string name="unfavorite">Dihapus dari Favorite</string>
+    <string name="favorited">Ditambahkan ke Favorite</string>
 
 </resources>

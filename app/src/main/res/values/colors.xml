@@ -5,7 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="blue_grey_700">#455A64</color>
     <color name="grey_30">#B8B7B7</color>
-    <color name="grey_60">#666666</color>
     <color name="whitee">#ffffff</color>
+    <color name="favorite">#FF9800</color>
+    <color name="type_film">#FF9800</color>
     <color name="transparant">#00000000</color>
 </resources>

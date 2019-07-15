@@ -3,13 +3,10 @@
 
     <string name="desc_movie_poster">Movie Poster</string>
     <string name="desc_change_languange_button">change languange button</string>
-    <string name="search_here_hint">Search Here</string>
+    <string name="favorite_button">Favorite Button</string>
     <string name="desc_poster_thumbnail">Poster Thumbnail</string>
-
     <string name="genre_crime">Crime</string>
-
-    <!--FILM-->
-
-    <!--TV-SERIES-->
+    <string name="unfavorite">Delete from Favorite</string>
+    <string name="favorited">Added to Favorite</string>
 
 </resources>

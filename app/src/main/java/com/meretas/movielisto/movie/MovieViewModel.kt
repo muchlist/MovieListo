@@ -9,7 +9,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MovieViewModel : ViewModel() {
+class MovieViewModel: ViewModel() {
 
     private val _movieData: MutableLiveData<List<MovieListData.Result>> = MutableLiveData()
     val movieData : LiveData<List<MovieListData.Result>>
@@ -23,6 +23,7 @@ class MovieViewModel : ViewModel() {
     val isError : LiveData<String>
         get() = _isError
 
+    //INISIALISASI
     init {
         _isLoading.value = false
         _isError.value = ""

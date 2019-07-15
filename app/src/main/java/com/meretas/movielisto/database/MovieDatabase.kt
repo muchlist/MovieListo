@@ -4,13 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.meretas.movielisto.data.MovieListData
+import com.meretas.movielisto.data.MovieDataMin
 
-@Database(entities = [MovieListData.Result::class], version = 1, exportSchema = false)
+@Database(entities = [MovieDataMin::class], version = 1, exportSchema = false)
 abstract class MovieDatabase : RoomDatabase() {
 
     abstract val movieDatabaseDao: MovieDatabaseDao
-    //abstract val tvDatabaseDao:TvDatabaseDao //tambahkan di entities juga
 
     companion object {
         @Volatile

@@ -64,6 +64,15 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_title" android:textSize="12sp"
                 tools:text="@string/genre_crime" android:textStyle="italic" android:paddingEnd="1dp"
                 android:paddingStart="1dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_type_film"
+                android:textSize="12sp"
+                tools:text="Tv Series" android:visibility="invisible" android:background="@color/type_film"
+                android:textColor="@color/whitee"
+                android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

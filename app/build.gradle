@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -13,7 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String" , "TMDB_API_KEY" , '"c51926b7a80f450b3f8f0fe0175b9634"')
+        buildConfigField("String", "TMDB_API_KEY", '"c51926b7a80f450b3f8f0fe0175b9634"')
     }
     buildTypes {
         release {
@@ -41,6 +43,8 @@ dependencies {
 
     def room_version = "2.1.0"
     implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
 
     //viewModel

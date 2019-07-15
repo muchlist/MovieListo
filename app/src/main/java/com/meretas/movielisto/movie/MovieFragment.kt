@@ -13,6 +13,8 @@ import com.meretas.movielisto.R
 import com.meretas.movielisto._detail.MovieDetailActivity
 import com.meretas.movielisto.data.MovieListData
 import com.meretas.movielisto.utils.DATA_INTENT_MAIN_DETAIL
+import com.meretas.movielisto.utils.FROM_MOVIE
+import com.meretas.movielisto.utils.SOURCE_INTENT
 import kotlinx.android.synthetic.main.fragment_movie.*
 import kotlinx.android.synthetic.main.fragment_movie.view.*
 import org.jetbrains.anko.startActivity
@@ -65,6 +67,7 @@ class MovieFragment : Fragment() {
         view.rv_movie.layoutManager = LinearLayoutManager(activity)
         movieAdapter = MovieListAdapter(activity, movieData) {
             context?.startActivity<MovieDetailActivity>(
+                SOURCE_INTENT to FROM_MOVIE,
                 DATA_INTENT_MAIN_DETAIL to it
             )
         }

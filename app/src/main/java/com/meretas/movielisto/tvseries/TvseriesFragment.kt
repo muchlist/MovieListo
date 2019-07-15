@@ -10,9 +10,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.meretas.movielisto.R
-import com.meretas.movielisto._detail.TvDetailActivity
+import com.meretas.movielisto._detail.MovieDetailActivity
 import com.meretas.movielisto.data.TvListData
 import com.meretas.movielisto.utils.DATA_INTENT_MAIN_DETAIL
+import com.meretas.movielisto.utils.FROM_TV
+import com.meretas.movielisto.utils.SOURCE_INTENT
 import kotlinx.android.synthetic.main.fragment_tvseries.*
 import kotlinx.android.synthetic.main.fragment_tvseries.view.*
 import org.jetbrains.anko.startActivity
@@ -65,7 +67,8 @@ class TvseriesFragment : Fragment() {
     private fun setRecyclerView(view: View) {
         view.rv_tvseries.layoutManager = LinearLayoutManager(activity)
         tvAdapter = TvseriesListAdapter(activity, tvSeriesData) {
-            context?.startActivity<TvDetailActivity>(
+            context?.startActivity<MovieDetailActivity>(
+                SOURCE_INTENT to FROM_TV,
                 DATA_INTENT_MAIN_DETAIL to it
             )
         }
