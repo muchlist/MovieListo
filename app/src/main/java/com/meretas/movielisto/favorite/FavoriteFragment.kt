@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.meretas.movielisto.R
-import com.meretas.movielisto._detail.MovieDetailActivity
+import com.meretas.movielisto.detail.MovieDetailActivity
 import com.meretas.movielisto.data.MovieDataMin
 import com.meretas.movielisto.database.MovieDatabase
 import com.meretas.movielisto.utils.DATA_INTENT_MAIN_DETAIL_FROM_FAVORITE
@@ -23,7 +23,7 @@ class FavoriteFragment : Fragment() {
 
     private lateinit var viewModel: FavoriteViewModel
     private lateinit var viewModelFactory: FavoriteViewModelFactory
-    private lateinit var movieAdapter: FavoriteAdapter
+    private lateinit var movieListAdapter: FavoriteListAdapter
     private var movieData: MutableList<MovieDataMin> = mutableListOf()
 
     override fun onCreateView(
@@ -46,7 +46,7 @@ class FavoriteFragment : Fragment() {
         viewModel.movieData.observe(this, Observer {
             this.movieData.clear()
             this.movieData.addAll(it)
-            movieAdapter.notifyDataSetChanged()
+            movieListAdapter.notifyDataSetChanged()
         })
 
         viewModel.getMovieData()
@@ -54,13 +54,13 @@ class FavoriteFragment : Fragment() {
 
     private fun setRecyclerView(view: View) {
         view.rv_favorite.layoutManager = LinearLayoutManager(activity)
-        movieAdapter = FavoriteAdapter(activity, movieData) {
+        movieListAdapter = FavoriteListAdapter(activity, movieData) {
             context?.startActivity<MovieDetailActivity>(
                 SOURCE_INTENT to FROM_FAVORITE,
                 DATA_INTENT_MAIN_DETAIL_FROM_FAVORITE to it
             )
         }
-        view.rv_favorite.adapter = movieAdapter
+        view.rv_favorite.adapter = movieListAdapter
 
 
     }

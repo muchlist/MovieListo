@@ -1,4 +1,4 @@
-package com.meretas.movielisto
+package com.meretas.movielisto.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

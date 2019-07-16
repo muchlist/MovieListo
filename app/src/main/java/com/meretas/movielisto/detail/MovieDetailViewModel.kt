@@ -1,4 +1,4 @@
-package com.meretas.movielisto._detail
+package com.meretas.movielisto.detail
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

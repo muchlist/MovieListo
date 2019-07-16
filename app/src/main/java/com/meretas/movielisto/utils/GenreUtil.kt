@@ -1,8 +1,9 @@
 package com.meretas.movielisto.utils
 
 class GenreUtil {
-    fun convertGenre(genreId: Int): String {
+    fun convertGenre(genreId: Int?): String {
         return when (genreId) {
+            0 -> "Unknown"
             28 -> "Action"
             12 -> "Adventure"
             16 -> "Animation"

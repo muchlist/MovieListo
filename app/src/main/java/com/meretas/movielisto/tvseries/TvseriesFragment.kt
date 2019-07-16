@@ -10,8 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.meretas.movielisto.R
-import com.meretas.movielisto._detail.MovieDetailActivity
+import com.meretas.movielisto.detail.MovieDetailActivity
 import com.meretas.movielisto.data.TvListData
+import com.meretas.movielisto.main.MainViewModel
 import com.meretas.movielisto.utils.DATA_INTENT_MAIN_DETAIL
 import com.meretas.movielisto.utils.FROM_TV
 import com.meretas.movielisto.utils.SOURCE_INTENT
@@ -23,7 +24,7 @@ import org.jetbrains.anko.toast
 
 class TvseriesFragment : Fragment() {
 
-    private lateinit var viewModel: TvseriesViewModel
+    private lateinit var viewModel: MainViewModel
     private lateinit var tvAdapter: TvseriesListAdapter
     private var tvSeriesData: MutableList<TvListData.Result> = mutableListOf()
 
@@ -37,9 +38,9 @@ class TvseriesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProviders.of(this).get(TvseriesViewModel::class.java)
+        viewModel = ViewModelProviders.of(activity!!).get(MainViewModel::class.java)
 
-        viewModel.isLoading.observe(this, Observer {
+        viewModel.isTvLoading.observe(viewLifecycleOwner, Observer {
             if (it) {
                 pb_tv_series.visibility = View.VISIBLE
             } else {
@@ -47,13 +48,13 @@ class TvseriesFragment : Fragment() {
             }
         })
 
-        viewModel.isError.observe(this, Observer {
+        viewModel.isTvError.observe(viewLifecycleOwner, Observer {
             if (!it.isNullOrEmpty()) {
                 activity?.toast(it)
             }
         })
 
-        viewModel.tvSeriesData.observe(this, Observer {
+        viewModel.tvSeriesData.observe(viewLifecycleOwner, Observer {
             this.tvSeriesData.clear()
             this.tvSeriesData.addAll(it)
             tvAdapter.notifyDataSetChanged()

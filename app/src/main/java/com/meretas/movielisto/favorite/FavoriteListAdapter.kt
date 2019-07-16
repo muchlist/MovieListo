@@ -10,11 +10,11 @@ import com.meretas.movielisto.data.MovieDataMin
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_list_view.view.*
 
-class FavoriteAdapter(
+class FavoriteListAdapter(
     private val context: Context?,
     private val itemHistory: List<MovieDataMin>,
     private val itemClick: (MovieDataMin) -> Unit
-) : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<FavoriteListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context)

@@ -35,8 +35,11 @@ class TvseriesListAdapter(
         fun bindItem(items: TvListData.Result) {
 
             val posterPath = BASE_IMG_URL + items.posterPath
-            val genre = GenreUtil().convertGenre(items.genreIds[0])
-            val genreScore = genre+ " ★ ${items.voteAverage}"
+            var genre = ""
+            if (items.genreIds.isNotEmpty()) {
+                genre = GenreUtil().convertGenre(items.genreIds[0])
+            }
+            val genreScore = genre + " ★ ${items.voteAverage}"
 
             itemView.tv_title.text = items.name
             itemView.tv_sub_title.text = items.overview

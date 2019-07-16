@@ -1,4 +1,4 @@
-package com.meretas.movielisto._detail
+package com.meretas.movielisto.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -36,8 +36,7 @@ class MovieDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         //CEK FROM FAVORITE OR NOT
-        val fromWhere = intent.getStringExtra(SOURCE_INTENT)
-        when(fromWhere){
+        when (intent.getStringExtra(SOURCE_INTENT)) {
             FROM_MOVIE -> initiateFromMovie()
             FROM_TV -> initiateFromTv()
             FROM_FAVORITE -> initiateFromFavorite()
@@ -107,7 +106,9 @@ class MovieDetailActivity : AppCompatActivity() {
         id = intent.id
         title = intent.title
         description = intent.overview
-        genre = GenreUtil().convertGenre(intent.genreIds[0])
+        if (intent.genreIds.isNotEmpty()) {
+            genre = GenreUtil().convertGenre(intent.genreIds[0])
+        }
         date = intent.releaseDate
         score = intent.voteAverage
         poster = BASE_IMG_URL + intent.posterPath
@@ -121,7 +122,9 @@ class MovieDetailActivity : AppCompatActivity() {
         id = intent.id
         title = intent.name
         description = intent.overview
-        genre = GenreUtil().convertGenre(intent.genreIds[0])
+        if (intent.genreIds.isNotEmpty()) {
+            genre = GenreUtil().convertGenre(intent.genreIds[0])
+        }
         date = intent.firstAirDate
         score = intent.voteAverage
         poster = BASE_IMG_URL + intent.posterPath
